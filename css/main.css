@@ -1,0 +1,638 @@
+/* 自己制作注册按钮   网址：http://blog.koalite.com/bbg!*/
+.btn-register {
+    color: #ffffff;
+    background-color: #E92322;
+    border-color: #DB3B43;
+}
+
+.btn-register:hover,
+.btn-register:focus,
+.btn-register:active,
+.btn-register.active,
+.open .dropdown-toggle.btn-register {
+    color: #ffffff;
+    background-color: #E92322;
+    border-color: #DB3B43;
+}
+
+.btn-register:active,
+.btn-register.active,
+.open .dropdown-toggle.btn-register {
+    background-image: none;
+}
+
+.btn-register.disabled,
+.btn-register[disabled],
+fieldset[disabled] .btn-register,
+.btn-register.disabled:hover,
+.btn-register[disabled]:hover,
+fieldset[disabled] .btn-register:hover,
+.btn-register.disabled:focus,
+.btn-register[disabled]:focus,
+fieldset[disabled] .btn-register:focus,
+.btn-register.disabled:active,
+.btn-register[disabled]:active,
+fieldset[disabled] .btn-register:active,
+.btn-register.disabled.active,
+.btn-register[disabled].active,
+fieldset[disabled] .btn-register.active {
+    background-color: #E92322;
+    border-color: #DB3B43;
+}
+
+.btn-register .badge {
+    color: #E92322;
+    background-color: #ffffff;
+}
+
+
+/*公共类*/
+body {
+    font-family: "Helvetica Neue",
+                  Helvetica,
+                  Microsoft Yahei,
+                  Hiragino Sans GB,
+                  WenQuanYi Micro Hei,
+                  sans-serif;
+}
+
+/* 声明字体图标   制作图标网址：https://icomoon.io/app/#/select*/
+@font-face {
+    font-family: "jianshe";
+    src: url('../font/MiFie-Web-Font.eot') format('embedded-opentype'),
+    url('../font/MiFie-Web-Font.svg') format('svg'),
+    url('../font/MiFie-Web-Font.ttf') format('truetype'),
+    url('../font/MiFie-Web-Font.woff') format('woff')
+
+}
+/*使用字体图标*/
+[class^="icon-"],[class*=" icon-"] {
+    font-family: jianshe;
+    font-style: normal;
+}
+.icon-mobilephone::before {
+    content: "\e908";
+    font-size: 13px;
+}
+
+.icon-telephone::before {
+    content: "\e909";
+    font-size: 15px;
+}
+
+
+
+body {
+	height: auto;
+	overflow-x: hidden;
+}
+/*头部区域*/
+#header {
+}
+
+#header > .topbar {
+    border-bottom: 1px solid #f0f0f0;
+    line-height: 40px;
+}
+/*头部居中*/
+#header > .topbar > .container {
+    height: 40px;
+    font-size: 12px;
+    color: #888;
+}
+
+#header > .topbar > .container > .row >div {
+    height: 40px;
+}
+
+/*使第一个div后面的div生效*/
+#header > .topbar > .container > .row >div + div {
+    border-left: 1px solid #f0f0f0;
+}
+
+#header .mobile-link {
+    font-size: 12px;
+    color: #888;
+}
+
+#header .mobile-link:hover {
+    text-decoration: none;
+}
+/*扫一扫图片*/
+#header .mobile-link >img {
+    display: none;
+    position: absolute;
+    top:28px;
+    left:50%;
+    margin-left: -60px;
+    z-index: 1001;
+}
+
+#header .mobile-link:hover >img {
+    display: block;
+}
+
+#header > .topbar > .container > .row  .col-md-2 a{
+    font-size: 12px;
+    color: #888;
+}
+
+#header > .topbar > .container > .row  .col-md-2 a:hover {
+    text-decoration: none;
+}
+
+
+#header > .topbar > .container > .row  .col-md-3 a {
+    color: #888;
+    font-size: 12px;
+}
+
+#header > .topbar > .container > .row  .col-md-3 a:hover {
+    text-decoration: none;
+}
+
+
+
+
+/*头部区域*/
+
+
+
+
+
+/*自己制作nav的图标，从css中复制过来修改*/
+.navbar-jianshe {
+    background-color: #fff;
+    border-color: #f5f5f5;
+    margin-bottom: 0;
+    /*下面是设置固定导航栏*/
+    top:0;
+    width: 100%;
+}
+.navbar-jianshe .navbar-brand {
+    color: #777;
+    height: 80px;
+}
+.navbar-jianshe .navbar-brand img {
+	width: 100px;
+	height: 45px;
+	display: block;
+	border-radius: 10px/5px;
+}
+.navbar-jianshe .navbar-brand:hover,
+.navbar-jianshe .navbar-brand:focus {
+    color: #5e5e5e;
+    background-color: transparent;
+}
+.navbar-jianshe .navbar-text {
+    color: #777;
+}
+.navbar-jianshe .navbar-nav > li > a {
+    color: #777;
+    line-height:48px;
+}
+.navbar-jianshe .navbar-nav > li > a:hover,
+.navbar-jianshe .navbar-nav > li > a:focus {
+    color: #333;
+    background-color: transparent;
+    border-bottom: 2px solid #E92322;
+}
+/*.navbar-jianshe .navbar-nav > .active > a,
+.navbar-jianshe .navbar-nav > .active > a:hover,
+.navbar-jianshe .navbar-nav > .active > a:focus {
+    color: #555;
+    background-color: transparent;
+    border-bottom: 2px solid #E92322;
+}*/
+.navbar-jianshe .navbar-nav > .disabled > a,
+.navbar-jianshe .navbar-nav > .disabled > a:hover,
+.navbar-jianshe .navbar-nav > .disabled > a:focus {
+    color: #ccc;
+    background-color: transparent;
+}
+.navbar-jianshe .navbar-toggle {
+    border-color: #ddd;
+    margin-top: 23px;
+}
+.navbar-jianshe .navbar-toggle:hover,
+.navbar-jianshe .navbar-toggle:focus {
+    background-color: #ddd;
+}
+.navbar-jianshe .navbar-toggle .icon-bar {
+    background-color: #888;
+}
+.navbar-jianshe .navbar-collapse,
+.navbar-jianshe .navbar-form {
+    border-color: #e7e7e7;
+}
+.navbar-jianshe .navbar-nav > .open > a,
+.navbar-jianshe .navbar-nav > .open > a:hover,
+.navbar-jianshe .navbar-nav > .open > a:focus {
+    color: #555;
+    background-color: #e7e7e7;
+}
+@media (max-width: 767px) {
+    .navbar-jianshe .navbar-nav .open .dropdown-menu > li > a {
+        color: #777;
+    }
+    .navbar-jianshe .navbar-nav .open .dropdown-menu > li > a:hover,
+    .navbar-jianshe .navbar-nav .open .dropdown-menu > li > a:focus {
+        color: #333;
+        background-color: transparent;
+    }
+    .navbar-jianshe .navbar-nav .open .dropdown-menu > .active > a,
+    .navbar-jianshe .navbar-nav .open .dropdown-menu > .active > a:hover,
+    .navbar-jianshe .navbar-nav .open .dropdown-menu > .active > a:focus {
+        color: #555;
+        background-color: #e7e7e7;
+    }
+    .navbar-jianshe .navbar-nav .open .dropdown-menu > .disabled > a,
+    .navbar-jianshe .navbar-nav .open .dropdown-menu > .disabled > a:hover,
+    .navbar-jianshe .navbar-nav .open .dropdown-menu > .disabled > a:focus {
+        color: #ccc;
+        background-color: transparent;
+    }
+}
+.navbar-jianshe .navbar-link {
+    color: #777;
+}
+.navbar-jianshe .navbar-link:hover {
+    color: #333;
+}
+.navbar-jianshe .btn-link {
+    color: #777;
+}
+.navbar-jianshe .btn-link:hover,
+.navbar-jianshe .btn-link:focus {
+    color: #333;
+}
+.navbar-jianshe .btn-link[disabled]:hover,
+fieldset[disabled] .navbar-jianshe .btn-link:hover,
+.navbar-jianshe .btn-link[disabled]:focus,
+fieldset[disabled] .navbar-jianshe .btn-link:focus {
+    color: #ccc;
+}
+
+
+/*搜索框*/
+@media only screen and (width: 320px) {
+			.navbar-nav input {
+				width: 200px;
+			}
+		}
+
+@media only screen and (width: 360px) {
+			.navbar-nav input {
+				width: 250px;
+			}
+		}
+
+@media only screen and (min-width: 375px) {
+			.navbar-nav input {
+				width: 320px;
+			}
+		}
+
+.navbar-nav input{
+	margin-top: 25px;
+	height: 35px;
+	color: #eee;	
+}
+.navbar-nav button {
+	width: 50px;
+	height: 35px;
+}
+
+
+
+
+/*广告轮播图*/
+#main_ad > .carousel-inner >.item{
+    background:  no-repeat center center;
+    background-size: cover;
+}
+
+/*当我们屏幕小于768的时候，高度不能使用410*/
+/*通过媒体查询控制*/
+@media (min-width: 768px) {
+    /*当屏幕大于768的时候，才会执行*/
+    #main_ad > .carousel-inner >.item{
+        height: 410px;
+    }
+}
+
+/*使小图便宽度100%*/
+#main_ad > .carousel-inner >.item img {
+    width: 100%;
+}
+/*广告轮播图*/
+
+
+
+/*图片区域*/
+#img {
+	margin-top: 40px;
+}
+#img img {
+	width: 100%;
+	height: 100%;
+}
+
+/*图片区域*/
+
+
+
+/*内容区域*/
+#design {
+	margin-top: 150px;
+	width: 100%;
+	height:auto;
+}
+#design h3 {
+	font-family: "微软雅黑";
+	font-weight: bold;
+	position: absolute;
+    margin-left: -120px;
+    /*小圆点整体宽度的一半*/
+    left: 50%;
+    margin-top: -70px;
+}
+#design p.tltle {
+	position: absolute;
+    margin-left: -75px;
+    /*小圆点整体宽度的一半*/
+    left: 50%;
+    margin-top: -30px;
+    color: dimgray;
+}
+#design .container .row div{
+	margin-top:10px;
+}
+#design .container .row div .list {
+	width: 400px;
+	height: 280px;
+}
+#design .list .design-left{
+	width: 190px;
+	height: 280px;
+	float: left;
+}
+#design .list .design-left img {
+	overflow: hidden;
+	display: block;
+	width: 190px;
+	height: 280px;
+}
+#design .list .design-body{
+	width: 190px;
+	height: 280px;
+	float: left;
+	background-color: #F8F8F8;
+	overflow-x: hidden;
+	padding:0 10px;
+}
+#design .list .design-body h5 {
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+#design .list .design-body p {
+	color: dimgray;
+    font-size: inherit;
+    font-weight: inherit;
+    font-family: inherit;
+    line-height: inherit;
+}
+#design .list .design-body span {
+	margin:20px 10px;
+	display: block;
+    color: dimgray;
+}
+#design .list .design-body a {
+	margin-top: 20px;
+	border: 1px solid gray;
+	padding: 8px;
+	display: block;
+	width: 85px;
+	color: dimgray;
+	font-size: 13px;
+	border-bottom: none;
+}
+#design .list .design-body a:hover {
+	text-decoration: none;
+	background-color: #E92322;
+	color: #fff;
+}
+/*内容区域*/
+
+
+/*生活方式*/
+#style {
+	margin-top: 150px;
+	width: 100%;
+	height:auto;
+}
+#style h3 {
+	font-family: "微软雅黑";
+	font-weight: bold;
+	position: absolute;
+    margin-left: -170px;
+    /*小圆点整体宽度的一半*/
+    left: 50%;
+    margin-top: -70px;
+}
+#style p.tltle {
+	position: absolute;
+    margin-left: -75px;
+    /*小圆点整体宽度的一半*/
+    left: 50%;
+    margin-top: -30px;
+    color: dimgray;
+}
+#style .container .row {
+	position: relative;
+}
+#style .container .row div{
+	margin-top:20px;
+}
+#style .container .row div .list {
+	width: 260px;
+	height: auto;
+}
+
+#style .container .row div .list .style-top{
+	overflow: hidden;
+	width:260px;
+	height: 450px;
+    background-image: url(../images/style.jpg);
+    background-position: center;
+    background-size: 100% auto;
+    transition: all 2s;
+}
+#style .container .row div .list .style-top:hover {
+   background-size: 150% auto;	
+}
+/*图片下面区域*/
+#style .container .row div .list .style-bottom h5 {
+    font-weight: bold;
+    color: dimgray;
+}#style .container .row div .list .style-bottom a:hover{
+	text-decoration: none;
+}
+#style .container .row div .list .style-bottom span {
+	color: dimgray;
+	padding-right: 5px;
+}
+#style .container .row div .list .style-bottom span a:hover {
+	text-decoration: underline;
+}
+/*加载更多*/
+#style .container .row .more {
+	text-align: center;
+    width: 100%;
+    height: 100px;
+}
+#style .container .row .more a{
+	text-decoration: none;
+	color: dimgray;
+	border: 1px solid gray;
+    padding: 10px 20px;
+	display: inline-block;
+	vertical-align: top;
+	margin-top: 50px;
+}
+#style .container .row .more a:hover {
+	text-decoration: none;
+	background-color: #E92322;
+	color: #FFF;
+}
+/*生活方式*/
+
+
+/*合作伙伴*/
+#hzhb .container{
+	margin-top: 200px;
+    padding: 20px 0;
+	border-top: 1px dashed #EEEEEE;
+}
+
+#hzhb ul {
+    padding: 0;
+    list-style: none;
+    position: relative;
+    overflow: hidden;
+}
+
+#hzhb ul li {
+    float: left;
+    display: inline-block;
+    /*设置自适应宽度*/
+    width: calc(100% / 9);
+}
+#hzhb ul li + li {
+  border-left: 1px dashed #c0c0c0;
+}
+
+#hzhb ul li a {
+    display: block;
+    color: #888;
+    font-size: 50px;
+    padding: 10px 20px;
+
+}
+
+#hzhb ul li a:hover {
+    text-decoration: none;
+    color: #E92322;
+}
+
+
+/*字体图标*/
+.hzhb01::before {
+    font-family: jianshe;
+    content: '\e946';
+    font-size: 50px;
+}
+.hzhb02::before {
+    font-family: jianshe;
+    content: '\e92f';
+    font-size: 50px;
+}
+.hzhb03::before {
+    font-family: jianshe;
+    content: '\e92e';
+    font-size: 50px;
+}
+.hzhb04::before {
+    font-family: jianshe;
+    content: '\e92a';
+    font-size: 50px;
+}
+.hzhb05::before {
+    font-family: jianshe;
+    content: '\e929';
+    font-size: 50px;
+}
+.hzhb06::before {
+    font-family: jianshe;
+    content: '\e931';
+    font-size: 50px;
+}
+.hzhb07::before {
+    font-family: jianshe;
+    content: '\e92c';
+    font-size: 50px;
+}
+.hzhb08::before {
+    font-family: jianshe;
+    content: '\e92b';
+    font-size: 50px;
+}
+.hzhb09::before {
+    font-family: jianshe;
+    content: '\e92d';
+    font-size: 50px;
+}
+/*合作伙伴*/
+
+
+
+/*脚注区域*/
+#footer .container .row {
+	margin-top: 50px;
+	 border-top: 1px solid #EEEEEE;
+}
+#footer .container .row .server {
+	 margin-top: 50px;
+}
+#footer .container .row .server .bg {
+	margin-top: -20px;
+}
+#footer .container .row .server a{
+	width: 100%;
+	height: auto;
+	display: block;
+}
+#footer .container .row .server dt {
+	margin-bottom: 10px;
+}
+#footer .container .row .server dd {
+	padding: 3px 0px;
+}
+#footer .container .row .server dd a{
+	color: dimgray;
+}
+#footer .container .mess {
+	width: 100%;
+	height: auto;
+	margin-top: 30px;
+	text-align: center;
+	border-top: 1px solid #EEEEEE;
+}
+#footer .container .mess p{
+	color: dimgray;
+    margin-top: 50px;
+}
+#footer .container .mess span {
+	color: dimgray;
+}
+/*脚注区域*/

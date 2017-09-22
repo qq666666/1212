@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang = "zh-CN">
+  <head>
+  <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" >
+	<title>建设网站</title>
+
+	<link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/main.css" />
+
+	<!--[if lt IE 9]>
+	<script src="lib/html5shiv/html5shiv.min.js"></script>
+	<script src="lib/respond/respond.min.js"></script>
+	<![endif]-->
+  </head>
+  <body>
+    <!--头部区域-->
+    <header id="header">
+	<!--<div class="topbar hidden-sm hidden-xs">-->
+	<!--隐藏-->
+	<div class="topbar visible-lg visible-md">
+		<!--居中-->
+		<div class="container">
+			<!--一行四列-->
+			<div class="row">
+				<div class="col-md-2 text-center">
+					<a href="" class="mobile-link">
+						<!--使用字体图标-->
+						<i class="icon-mobilephone"></i>
+						<span>联系我</span>
+						<i class="glyphicon glyphicon-chevron-down"></i>
+						<img src="images/me.jpg" alt="扫一扫">
+					</a>
+				</div>
+				<div class="col-md-5 text-center">
+					<i class="icon-telephone"></i>
+					<span>13306093925（服务时间：9:00-21:00）</span>
+				</div>
+				<div class="col-md-2 text-center">
+					<a href="#">设计咨询服务</a>
+				</div>
+				<div class="col-md-3 text-center">
+					<button type="button" class="btn btn-register btn-sm">免费注册</button>
+					<a href="#" class="btn btn-link btn-sm" role="button" data-toggle="modal" data-target="#myForm">登录</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--data-offset-top什么时候出现   data-offset-bottom什么时候消失  data-spy固定-->
+	<nav class="navbar navbar-jianshe navbar-static-top" data-spy="affix" data-offset-top="60" data-offset-bottom="1000">
+		<div class="container">
+			<div class="navbar-header">
+				<!--当屏幕小于。。时出现汉堡按钮-->
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav_list" aria-expanded="false">
+					<span class="sr-only">切换菜单</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">
+					<img src="images/logo.png" alt="" />
+				</a>
+			</div>
+			<div class="collapse navbar-collapse" id="nav_list">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="#">首页</a></li>
+					<li><a href="#">往期项目</a></li>					
+					<li><a href="#">施工队员</a></li>
+					<li><a href="#">最新动态</a></li>
+					<li><a href="#">个人中心</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<!--当到一定宽度时隐藏-->
+					<li class="hidden-sm">
+						 <label for="">
+						 	<input id = 'txt' type="text" value='往期项目'/>
+						 	<button>搜索</button>
+						 </label>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	 <!--JS语言的描写-->
+ <script>
+                      var txt = document.getElementById("txt");
+//                      获得焦点，判断用户是否输入，当输入框为原来值的时候，则用户点击是变为空
+                      txt.onfocus = function() {
+                          if (txt.value == "往期项目") {
+                              txt.value = "";
+                              txt.style.color = "#333";
+                          }
+//                          失去焦点
+                          txt.onblur = function () {
+                              if (txt.value == "") {
+                                  txt.value = "往期项目";
+                                  txt.style.color = "#ccc";
+                              }
+                          }
+                      }
+ </script>
+</header>
+    
+    <!--广告轮播-->
+<section id="main_ad" class="carousel slide" data-ride="carousel">
+		<!-- Indicators -->
+		<!--指示器，下面的小原点-->
+		<ol class="carousel-indicators">
+			<li data-target="#main_ad" data-slide-to="0" class="active"></li>
+			<li data-target="#main_ad" data-slide-to="1"></li>
+			<li data-target="#main_ad" data-slide-to="2"></li>
+			<li data-target="#main_ad" data-slide-to="3"></li>
+		</ol>
+
+		<!-- Wrapper for slides -->
+		<!--轮播图-->
+		<div class="carousel-inner" role="listbox">
+			<div class="item active" data-image-lg="images/1-big.jpg"  data-image-xs="images/1-sm.jpg"></div>
+			<div class="item" data-image-lg="images/2-big.jpg"  data-image-xs="images/2-sm.jpg"></div>
+			<div class="item" data-image-lg="images/3-big.jpg"  data-image-xs="images/3-sm.jpg"></div>
+			<div class="item" data-image-lg="images/4-big.jpg"  data-image-xs="images/4-sm.jpg"></div>
+		</div>
+
+		<!-- Controls -->
+		<!--左右控制按钮-->
+		<a class="left carousel-control" href="#main_ad" role="button" data-slide="prev">
+			<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+			<span class="sr-only">Previous</span>
+		</a>
+		<a class="right carousel-control" href="#main_ad" role="button" data-slide="next">
+			<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+			<span class="sr-only">Next</span>
+		</a>
+</section>
+<!--/广告轮播-->
+    
+ <!--图片-->
+   <section id="img">
+        <div class="container">
+    	    <img src="images/loft.jpg" alt="" />     
+        </div>
+  </section>
+ <!--图片-->
+ 
+ <!--内容区域-->
+ <section id="design">
+  <div class="container">
+  	<h3>发现隐藏在街角小巷的惊喜</h3>
+  	<p class='tltle'>总有一个值得你深入探索未知</p>
+	  <div class="row">
+	      <div class="col-md-4 col-sm-6 col-sm-12">
+					<div class="list">
+						<a href="">
+						  <div class="design-left">
+							  <img src="images/design.jpg" alt="" />
+						  </div>
+						</a>
+							<div class="design-body">
+								 <span>2017年9月22日</span>
+								 <h5>建筑营ARCH STUDIO：北京保利艺术教育机构设计</h5>
+								 <p>Gensler设计了eBay的圣何塞办公室的企业食堂。新厨房是eBay的新食物体验培育社区，也是公司的企业食堂…</p>
+								 <a href=""title="阅读更多…">阅读更多…</a>
+							</div>
+					</div>
+			  </div>
+			  <div class="col-md-4 col-sm-6 col-sm-12">
+					<div class="list">
+						<a href="">
+						  <div class="design-left">
+							  <img src="images/design.jpg" alt="" />
+						  </div>
+						</a>
+							<div class="design-body">
+								 <span>2017年9月22日</span>
+								 <h5>建筑营ARCH STUDIO：北京保利艺术教育机构设计</h5>
+								 <p>paulo moreira为位于里斯本东部马尔维拉区一间闲置的仓库Musa Brewery进行了改造设计，将其…</p>
+								 <a href=""title="阅读更多…">阅读更多…</a>
+							</div>
+					</div>
+			  </div>
+			  <div class="col-md-4 col-sm-6 col-sm-12">
+					<div class="list">
+						<a href="">
+						  <div class="design-left">
+							  <img src="images/design.jpg" alt="" />
+						  </div>
+						</a>
+							<div class="design-body">
+								 <span>2017年9月22日</span>
+								 <h5>建筑营ARCH STUDIO：北京保利艺术教育机构设计</h5>
+								 <p>paulo moreira为位于里斯本东部马尔维拉区一间闲置的仓库Musa Brewery进行了改造设计，将其…</p>
+								 <a href=""title="阅读更多…">阅读更多…</a>
+							</div>
+					</div>
+			  </div>
+			  <div class="col-md-4 col-sm-6 col-sm-12">
+					<div class="list">
+						<a href="">
+						  <div class="design-left">
+							  <img src="images/design.jpg" alt="" />
+						  </div>
+						</a>
+							<div class="design-body">
+								 <span>2017年9月22日</span>
+								 <h5>建筑营ARCH STUDIO：北京保利艺术教育机构设计</h5>
+								 <p>paulo moreira为位于里斯本东部马尔维拉区一间闲置的仓库Musa Brewery进行了改造设计，将其…</p>
+								 <a href=""title="阅读更多…">阅读更多…</a>
+							</div>
+					</div>
+			  </div>
+			  <div class="col-md-4 col-sm-6 col-sm-12">
+					<div class="list">
+						<a href="">
+						  <div class="design-left">
+							  <img src="images/design.jpg" alt="" />
+						  </div>
+						</a>
+							<div class="design-body">
+								 <span>2017年9月22日</span>
+								 <h5>建筑营ARCH STUDIO：北京保利艺术教育机构设计</h5>
+								 <p>paulo moreira为位于里斯本东部马尔维拉区一间闲置的仓库Musa Brewery进行了改造设计，将其…</p>
+								 <a href=""title="阅读更多…">阅读更多…</a>
+							</div>
+					</div>
+			  </div>
+			  <div class="col-md-4 col-sm-6 col-sm-12">
+					<div class="list">
+						<a href="">
+						  <div class="design-left">
+							  <img src="images/design.jpg" alt="" />
+						  </div>
+						</a>
+							<div class="design-body">
+								 <span>2017年9月22日</span>
+								 <h5>建筑营ARCH STUDIO：北京保利艺术教育机构设计</h5>
+								 <p>paulo moreira为位于里斯本东部马尔维拉区一间闲置的仓库Musa Brewery进行了改造设计，将其…</p>
+								 <a href=""title="阅读更多…">阅读更多…</a>
+							</div>
+					</div>
+			  </div>			  	  					  
+    </div>   
+  </div>
+</section>
+ <!--内容区域-->
+ 
+ 
+ <!--生活方式-->
+  <section id="style">
+  <div class="container">
+<h3>梦想家–发现更随初心的生活方式</h3>
+  	<p class='tltle'>发现属于自己的美</p>
+	  <div class="row">
+	      <div class="col-md-3 col-sm-6 col-sm-12">
+					<div class="list">
+						<div class="style-top"></div>						
+							<div class="style-bottom">
+								 <a href=""><h5>建筑营ARCH STUDIO：北京保利艺术教育机构设计</h5></a>
+								 <span><a href="">1212设计 </a></span>
+								 <span>2017年9月22日</span>
+							</div>
+					</div>
+			  </div>
+			  <div class="col-md-3 col-sm-6 col-sm-12">
+					<div class="list">
+						<div class="style-top"></div>						
+							<div class="style-bottom">
+								 <a href=""><h5>建筑营ARCH STUDIO：北京保利艺术教育机构设计</h5></a>
+								 <span><a href="">1212设计 </a></span>
+								 <span>2017年9月22日</span>
+							</div>
+					</div>
+			  </div>
+			  <div class="col-md-3 col-sm-6 col-sm-12">
+					<div class="list">
+						<div class="style-top"></div>						
+							<div class="style-bottom">
+								 <a href=""><h5>建筑营ARCH STUDIO：北京保利艺术教育机构设计</h5></a>
+								 <span><a href="">1212设计 </a></span>
+								 <span>2017年9月22日</span>
+							</div>
+					</div>
+			  </div>
+			  <div class="col-md-3 col-sm-6 col-sm-12">
+					<div class="list">
+						<div class="style-top"></div>						
+							<div class="style-bottom">
+								 <a href=""><h5>建筑营ARCH STUDIO：北京保利艺术教育机构设计</h5></a>
+								 <span><a href="">1212设计 </a></span>
+								 <span>2017年9月22日</span>
+							</div>
+					</div>
+			  </div>
+			  <div class="col-md-3 col-sm-6 col-sm-12">
+					<div class="list">
+						<div class="style-top"></div>						
+							<div class="style-bottom">
+								 <a href=""><h5>建筑营ARCH STUDIO：北京保利艺术教育机构设计</h5></a>
+								 <span><a href="">1212设计 </a></span>
+								 <span>2017年9月22日</span>
+							</div>
+					</div>
+			  </div>
+			  <div class="col-md-3 col-sm-6 col-sm-12">
+					<div class="list">
+						<div class="style-top"></div>						
+							<div class="style-bottom">
+								 <a href=""><h5>建筑营ARCH STUDIO：北京保利艺术教育机构设计</h5></a>
+								 <span><a href="">1212设计 </a></span>
+								 <span>2017年9月22日</span>
+							</div>
+					</div>
+			  </div>
+			  <div class="col-md-3 col-sm-6 col-sm-12">
+					<div class="list">
+						<div class="style-top"></div>						
+							<div class="style-bottom">
+								 <a href=""><h5>建筑营ARCH STUDIO：北京保利艺术教育机构设计</h5></a>
+								 <span><a href="">1212设计 </a></span>
+								 <span>2017年9月22日</span>
+							</div>
+					</div>
+			  </div>
+			  <div class="col-md-3 col-sm-6 col-sm-12">
+					<div class="list">
+						<div class="style-top"></div>						
+							<div class="style-bottom">
+								 <a href=""><h5>建筑营ARCH STUDIO：北京保利艺术教育机构设计</h5></a>
+								 <span><a href="">1212设计 </a></span>
+								 <span>2017年9月22日</span>
+							</div>
+					</div>
+			  </div>
+			  
+			  <div class='more'><a href="#" title="加载更多...">加载更多</a></div>				  
+    </div>   
+  </div>
+</section>
+ <!--生活方式-->
+    
+    
+ <!--合作伙伴-->
+<section id="hzhb" class="text-center hidden-xs">
+	<div class="container">
+		<h3>合作伙伴</h3>
+		<ul  class="center-block">
+			<li><a href="#"><i class="hzhb01"></i></a></li>
+			<li><a href="#"><i class="hzhb02"></i></a></li>
+			<li><a href="#"><i class="hzhb03"></i></a></li>
+			<li><a href="#"><i class="hzhb04"></i></a></li>
+			<li><a href="#"><i class="hzhb05"></i></a></li>
+			<li><a href="#"><i class="hzhb06"></i></a></li>
+			<li><a href="#"><i class="hzhb07"></i></a></li>
+			<li><a href="#"><i class="hzhb08"></i></a></li>
+			<li><a href="#"><i class="hzhb09"></i></a></li>
+		</ul>
+	</div>
+</section>
+<!--/合作伙伴-->
+
+
+
+<!--脚注区域-->
+<section id="footer">
+	<div class="container">
+		 <div class="row  hidden-sm hidden-xs hidden-md">
+		 	   <div class="server">
+		 	   	   <div class="col-lg-2 bg">
+		 	   	     <a href=""><img src="images/logo.png" alt="" /></a> 	  
+		 	       </div>
+					 	 <div class="col-lg-2">
+					 	 	  <dl>
+	                <dt>关于</dt>
+	                <dd><a href="">成长故事</a></dd>
+	                <dd><a href="">关于1212设计</a></dd>
+	                <dd><a href="">加入我们</a></dd>
+	                <dd><a href="">工厂合作</a></dd>
+	                <dd><a href="">意见与建议</a></dd>
+	                <dd><a href="">联系我们</a></dd>
+	                <dd><a href="">在线留言</a></dd>
+                </dl> 	 	 
+					 	 </div>					 	 
+		 	       <div class="col-lg-2">
+					 	 	      <dl>
+			                <dt>关注</dt>
+			                <dd><a href="">微信关注</a></dd>
+			                <dd><a href="">邮件订阅</a></dd>
+			                <dd><a href="">网站地图</a></dd>			               
+			             </dl>	 	 	 
+					 	 </div>
+					 	 <div class="col-lg-2">
+					 	 	    <dl>
+		                <dt>使用索引</dt>
+		                <dd><a href="">用户帮助中心</a></dd>
+		                <dd><a href="">用户使用协议</a></dd>
+		                <dd><a href="">免责声明</a></dd>
+		                <dd><a href="">投稿须知</a></dd>
+		                <dd><a href="">版本权</a></dd>
+                  </dl> 	 	 
+					 	 </div>
+					 	 <div class="col-lg-2">
+					 	 	 <dl>
+	                <dt>合作伙伴</dt>
+	                <dd><a href="">百度</a></dd>
+	                <dd><a href="">银联支付</a></dd>
+	                <dd><a href="">中国人寿</a></dd>
+	                <dd><a href="">国家电网</a></dd>
+	                <dd><a href="">LOFT中国</a></dd>
+               </dl> 	 	 
+					 	 </div>
+					 	 <div class="col-lg-2">
+		 	 	      <dl>
+                <dt>建设创新设计</dt>
+                <dd><a href="">乌克兰料理餐厅设计</a></dd>
+                <dd><a href="">餐饮设计研究室</a></dd>
+                <dd><a href="">巴黎小酒管设计</a></dd>
+                <dd><a href="">哥斯达黎加办公室设计</a></dd>
+                <dd><a href="">Musa Brewery啤酒厂设计</a></dd>
+                <dd><a href="">西班牙滨海住宅设计</a></dd>
+             </dl> 	 	 
+		 	    </div>					 	 
+		 	   </div>
+		 </div>
+		     <div class="mess">
+           <p>1212设计中国为专业精准的1212设计、建构、推广提供一体化服务平台，我们每天推送全球最有价值的设计行业资讯</p>
+            <span>
+            	 © 2016 - 2018  1212设计 服务|维权热线：13306093925
+            </span>
+        </div>
+	</div>
+</section>
+<!--脚注区域-->
+
+ <!--模态框-->
+<div class="modal fade" id="myForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<!--头部-->
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel">登录表单</h4>
+			</div>
+			<!--中部-->
+			<div class="modal-body">
+				<form class="form-horizontal">
+					<div class="form-group">
+						<label for="inputEmail3" class="col-sm-2 control-label">Email:</label>
+						<div class="col-sm-10">
+							<input type="email" class="form-control" id="inputEmail3" placeholder="请输入邮箱">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="inputPassword3" class="col-sm-2 control-label">Password:</label>
+						<div class="col-sm-10">
+							<input type="password" class="form-control" id="inputPassword3" placeholder="请输入密码">
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-offset-2 col-sm-10">
+							<div class="checkbox">
+								<label>
+									<input type="checkbox">记住密码
+								</label>
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-offset-2 col-sm-10">
+							<button type="submit" class="btn btn-default">格式校验</button>
+						</div>
+					</div>
+				</form>
+			</div>
+			<!--尾部-->
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+				<button type="button" class="btn btn-primary">保存</button>
+			</div>
+		</div>
+	</div>
+</div>
+    
+    <script src="lib/jquery/jquery.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
